@@ -1,183 +1,190 @@
 /* ============================================================
-   满分男友测评 · 拼贴手账（junk journal）风
-   皱纸纹理 / 撕纸边 / washi 胶带 / 复古贴纸 / 微微歪斜
+   满分男友测评 · 少女涂鸦（糖果撞色）· 主题
+   玫粉 + 柠檬黄 + 薄荷 / 大圆角 / 水彩雾底 / 手绘涂鸦
    ============================================================ */
 
 [data-theme="boyfriend"]{
-  --bg:#EDE3CE;        /* 牛皮纸底 */
-  --paper:#FDF8F0;     /* 奶油纸 */
-  --ink:#4A4543;       /* 铅笔炭黑 */
-  --ink-2:#7C7269;     --ink-3:#948A80;
+  --bg:#FFF6F8;
+  --paper:#FFFCF4;
+  --ink:#6B5560;
+  --ink-2:#9A7F8B;
+  --ink-3:#AC93A0;
 
-  --accent:#F2D06B;    /* 奶油黄（主按钮） */
-  --accent-2:#B5CDB6;  /* 鼠尾草绿 */
-  --accent-3:#F2C4C4;  /* 柔粉 */
-  --tape:#E7D9AE;
+  --accent:#FF9EC4;    /* 玫粉 */
+  --accent-2:#FFD166;  /* 柠檬黄 */
+  --accent-3:#8ED9C0;  /* 薄荷 */
+  --tape:rgba(255,158,196,.55);
+  --line:rgba(120,80,100,.30);
 
-  --rust:#A05A3C;      /* 铁锈红 */
-  --dusty:#D4919A;     /* 灰玫瑰 */
-  --sky:#A8C8E8;       /* 雾蓝 */
-  --lav:#C9B8D9;       /* 薰衣草 */
-  --kraft:#C4A882;
-
-  --hand:"ZCOOL KuaiLe","Yuanti SC","HanziPen SC","Kaiti SC","KaiTi",cursive;
-  --sans:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,sans-serif;
-
-  /* 皱纸纹理（feTurbulence + 漫反射光） */
-  --crumple:url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='400'%20height='400'%3E%3Cfilter%20id='p'%3E%3CfeTurbulence%20type='fractalNoise'%20baseFrequency='0.013%200.017'%20numOctaves='4'%20seed='11'/%3E%3CfeDiffuseLighting%20lighting-color='%23ffffff'%20surfaceScale='2.4'%3E%3CfeDistantLight%20azimuth='235'%20elevation='60'/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect%20width='400'%20height='400'%20filter='url(%23p)'/%3E%3C/svg%3E");
+  --hand:"Noto Serif SC","Songti SC","STSong","SimSun",serif;
+  --sans:"Noto Serif SC","Songti SC","STSong","PingFang SC","Microsoft YaHei",serif;
 }
 
-/* ---------- 底：牛皮纸 + 皱褶 ---------- */
-[data-theme="boyfriend"]{
+/* ---------- 底：粉底 + 水彩雾 + 颗粒 ---------- */
+body[data-theme="boyfriend"]{
   background-color:var(--bg);
-  background-image:radial-gradient(rgba(150,120,70,.09) 1px, transparent 1.2px);
-  background-size:9px 9px;
+  background-image:
+    radial-gradient(46% 34% at 12% 4%,  rgba(255,158,196,.42), transparent 70%),
+    radial-gradient(42% 30% at 90% 10%, rgba(255,209,102,.34), transparent 72%),
+    radial-gradient(50% 36% at 84% 90%, rgba(142,217,192,.36), transparent 74%),
+    radial-gradient(44% 32% at 14% 94%, rgba(215,196,238,.34), transparent 72%);
+  background-attachment:fixed;
 }
+body[data-theme="boyfriend"]::before{ opacity:0; }            /* 关掉旧的纸纹层 */
 body[data-theme="boyfriend"]::after{
-  content:""; position:fixed; inset:0; z-index:0; pointer-events:none;
-  background-image:var(--crumple); background-size:520px 520px;
-  mix-blend-mode:multiply; opacity:.55;
+  content:""; position:fixed; inset:0; z-index:0; pointer-events:none; opacity:.20;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
 }
-[data-theme="boyfriend"] .wrap{ padding-bottom:60px; }
+[data-theme="boyfriend"] .wrap{ position:relative; z-index:1; padding-bottom:56px; }
 
-[data-theme="boyfriend"] h1{ font-size:35px; letter-spacing:.02em; transform:rotate(-.6deg); }
+/* ---------- 报头 ---------- */
+[data-theme="boyfriend"] .masthead{ position:relative; padding-top:34px; }
+[data-theme="boyfriend"] .kicker{
+  background:rgba(255,209,102,.55); color:#8A5B2E;
+  border:none; border-radius:999px; font-weight:600;
+  font-family:var(--sans); letter-spacing:.14em;
+  padding:5px 13px; transform:rotate(-1deg);
+}
+[data-theme="boyfriend"] h1{
+  font-family:var(--hand); font-weight:600; font-size:33px;
+  line-height:1.36; letter-spacing:.01em; color:var(--ink); margin-top:16px;
+}
+[data-theme="boyfriend"] .lede{ color:var(--ink-2); }
+[data-theme="boyfriend"] .lede em{ background:linear-gradient(transparent 62%, rgba(255,209,102,.8) 62%); }
+[data-theme="boyfriend"] .meta span{
+  background:rgba(255,255,255,.72); border:none; border-radius:999px;
+  padding:4px 12px; color:var(--ink-2);
+  font-family:"Special Elite","Courier New",monospace; letter-spacing:.06em;
+}
 
-/* ---------- 卡片：一整张皱巴巴的纸 ---------- */
+/* 手绘波浪下划线 */
+.wavy{ display:block; width:138px; height:11px; margin:10px 0 2px; }
+.wavy path{ fill:none; stroke:rgba(255,123,168,.95); stroke-width:3.5; stroke-linecap:round; }
+
+/* ---------- 卡片 ---------- */
 [data-theme="boyfriend"] .card{
-  background-color:var(--paper);
-  background-image:var(--crumple), radial-gradient(rgba(150,120,70,.07) 1px, transparent 1.1px);
-  background-size:360px 360px, 9px 9px;
-  background-blend-mode:multiply, normal;
-  border-width:3px;
-  border-radius:6px 22px 5px 20px/18px 6px 24px 6px;
-  transform:rotate(.35deg);
-  box-shadow:7px 9px 0 -1px #F2E8D4, 8px 10px 0 1px rgba(74,63,53,.20), 0 18px 34px rgba(74,63,53,.18);
+  position:relative;
+  background:
+    radial-gradient(56% 42% at 88% 4%, rgba(142,217,192,.20), transparent 72%),
+    radial-gradient(52% 40% at 8% 92%, rgba(255,209,102,.20), transparent 74%),
+    var(--paper);
+  border:2px solid var(--line);
+  border-radius:24px;
+  box-shadow:0 12px 32px rgba(180,120,150,.18), inset 0 0 0 6px rgba(255,255,255,.5);
 }
-
-/* ---------- washi 胶带 ---------- */
 [data-theme="boyfriend"] .tape{
-  height:26px; width:104px; opacity:1;
-  background:repeating-linear-gradient(-45deg, rgba(212,145,154,.85) 0 11px, rgba(242,196,196,.85) 11px 22px);
-  border:none; border-radius:2px;
-  box-shadow:0 2px 5px rgba(74,63,53,.18);
-}
-[data-theme="boyfriend"] .tape.tl{ left:28px; transform:rotate(-9deg); }
-[data-theme="boyfriend"] .tape.tr{ right:28px; transform:rotate(8deg); }
-
-.washi{
-  position:absolute; width:100px; height:24px; pointer-events:none; z-index:4;
-  background:repeating-linear-gradient(-45deg, rgba(168,200,232,.9) 0 10px, rgba(201,184,217,.9) 10px 20px);
-  box-shadow:0 2px 5px rgba(74,63,53,.18);
+  background:repeating-linear-gradient(-45deg, rgba(255,158,196,.8) 0 10px, rgba(255,209,102,.8) 10px 20px);
+  border:none; border-radius:3px; opacity:.95;
 }
 
-/* ---------- 贴纸按钮 ---------- */
+/* ---------- 按钮 ---------- */
 [data-theme="boyfriend"] .btn{
-  border:2.5px solid var(--ink);
-  border-radius:20px 8px 22px 10px/10px 22px 8px 20px;
-  background:linear-gradient(180deg,#F7DF93 0%, var(--accent) 62%, #E0B94E 100%);
-  box-shadow:0 0 0 4px #fff, 0 5px 0 var(--ink), 0 12px 20px rgba(74,63,53,.22);
-  color:var(--ink); letter-spacing:.05em;
+  border:none; border-radius:999px;
+  background:linear-gradient(180deg,#FF9EC4,#FF7BA8); color:#6E2F4A;
+  font-family:var(--hand); font-weight:600; letter-spacing:.06em;
+  box-shadow:0 7px 0 rgba(190,90,130,.32), 0 12px 22px rgba(214,120,150,.24);
+  text-shadow:0 1px 0 rgba(255,255,255,.35);
 }
-[data-theme="boyfriend"] .btn:hover{ filter:brightness(1.04); transform:rotate(-.6deg); }
-[data-theme="boyfriend"] .btn:active{ transform:translateY(5px) rotate(-.6deg); box-shadow:0 0 0 4px #fff, 0 0 0 var(--ink), inset 0 3px 0 rgba(255,255,255,.5); }
-
+[data-theme="boyfriend"] .btn:hover{ filter:brightness(1.04); transform:rotate(-.5deg); }
+[data-theme="boyfriend"] .btn:active{ transform:translateY(5px) rotate(-.5deg); box-shadow:0 0 0 rgba(190,90,130,.32), inset 0 3px 0 rgba(255,255,255,.45); }
 [data-theme="boyfriend"] .btn.ghost,
 [data-theme="boyfriend"] .btn.prev{
-  background:var(--paper);
-  box-shadow:0 0 0 4px #fff, 0 4px 0 rgba(74,63,53,.55), 0 9px 16px rgba(74,63,53,.16);
+  background:rgba(255,255,255,.92); color:var(--ink);
+  box-shadow:0 4px 0 rgba(190,140,160,.22), 0 8px 16px rgba(190,140,160,.12);
 }
 [data-theme="boyfriend"] .btn.ghost:hover,
-[data-theme="boyfriend"] .btn.prev:hover{ background:#FFF6E2; }
-[data-theme="boyfriend"] .btn.prev:disabled{ box-shadow:0 0 0 4px #fff, 0 3px 0 rgba(74,63,53,.18); }
+[data-theme="boyfriend"] .btn.prev:hover{ background:#FFF4F8; }
+[data-theme="boyfriend"] .btn.prev:disabled{ box-shadow:0 2px 0 rgba(190,140,160,.10); }
 
-/* ---------- 选项：纸条 ---------- */
+/* ---------- 进度 ---------- */
+[data-theme="boyfriend"] .progress .num{ color:var(--ink); font-family:var(--hand); }
+[data-theme="boyfriend"] .progress .bar{ background:rgba(255,255,255,.8); border:2px solid var(--line); height:13px; }
+[data-theme="boyfriend"] .progress .fill{
+  background:repeating-linear-gradient(-45deg,#FFB3D0 0 9px,#FF9EC4 9px 18px);
+}
+
+/* ---------- 题目 ---------- */
+[data-theme="boyfriend"] .qtag{
+  background:rgba(142,217,192,.5); color:#2F6155;
+  border:none; border-radius:999px; font-weight:600; font-family:var(--sans);
+  padding:5px 13px; transform:rotate(-1deg);
+}
+[data-theme="boyfriend"] .qhint{
+  display:inline-block; font-family:"Special Elite","Courier New",monospace;
+  font-size:11px; letter-spacing:.1em; color:#8A5B2E;
+  background:rgba(255,209,102,.55); border:none; border-radius:999px;
+  padding:4px 11px; margin:0 0 0 8px; transform:rotate(1.5deg);
+}
+[data-theme="boyfriend"] .q{ font-family:var(--hand); font-weight:600; font-size:20.5px; line-height:1.62; }
+
 [data-theme="boyfriend"] .opt{
-  border-width:2.5px;
-  border-radius:4px 14px 4px 12px/12px 4px 16px 4px;
-  background:linear-gradient(180deg,#FFFDF6, #FBF4E6);
-  box-shadow:0 3px 0 rgba(74,63,53,.14), 0 6px 12px rgba(74,63,53,.08);
+  background:rgba(255,255,255,.92);
+  border:2px solid rgba(120,80,100,.24);
+  border-radius:18px 14px 20px 12px;
+  box-shadow:0 4px 0 rgba(190,140,160,.18), 0 8px 16px rgba(190,140,160,.10);
+  font-size:15px;
 }
 [data-theme="boyfriend"] .opt:nth-child(odd){ transform:rotate(-.35deg); }
 [data-theme="boyfriend"] .opt:nth-child(even){ transform:rotate(.4deg); }
-[data-theme="boyfriend"] .opt:hover{ background:#FFF6E2; }
-[data-theme="boyfriend"] .opt:active{ transform:translateY(2px) rotate(0deg); box-shadow:0 1px 0 rgba(74,63,53,.14); }
+[data-theme="boyfriend"] .opt:hover{ background:#FFF6FA; }
+[data-theme="boyfriend"] .opt:active{ transform:translateY(3px); box-shadow:0 1px 0 rgba(190,140,160,.18); }
 [data-theme="boyfriend"] .opt.on{
-  background:linear-gradient(180deg,#FBE7C4, #F5D89B);
-  box-shadow:0 4px 0 #C9A85E, 0 0 0 2.5px #fff inset;
+  background:rgba(255,206,219,.88);
+  border-color:rgba(214,120,150,.55);
+  box-shadow:0 4px 0 rgba(214,120,150,.30), 0 8px 16px rgba(214,120,150,.16);
 }
 [data-theme="boyfriend"] .opt .k{
-  border-radius:50% 42% 54% 46%/46% 54% 42% 50%;
-  background:var(--accent-2);
-  box-shadow:0 0 0 2.5px #fff;
+  background:rgba(255,209,102,.62); color:#8A5B2E; border:none;
+  border-radius:50% 44% 54% 46%; font-family:"Special Elite","Courier New",monospace;
 }
-[data-theme="boyfriend"] .opt.on .k{ background:var(--dusty); }
+[data-theme="boyfriend"] .opt.on .k{ background:rgba(255,158,196,.95); color:#6E2F4A; }
 
-/* 标签 / 提示 */
-[data-theme="boyfriend"] .qtag{ background:var(--accent-2); }
-[data-theme="boyfriend"] .qhint{
-  display:inline-block; font-family:var(--hand); font-size:12px; font-weight:700; color:var(--ink);
-  background:var(--accent-3); border:2px solid var(--ink);
-  border-radius:16px 5px 18px 7px/7px 18px 5px 16px;
-  padding:2px 10px; transform:rotate(1.4deg); margin:0 0 0 8px;
-}
-[data-theme="boyfriend"] .progress .bar{ height:13px; background:#F0E6CE; border-width:2px; }
-[data-theme="boyfriend"] .progress .fill{
-  background:repeating-linear-gradient(-45deg,#E9C767 0 9px,#F2D06B 9px 18px);
-}
-
-/* ---------- 结果：徽章 + 得分 ---------- */
+/* ---------- 结果 ---------- */
 [data-theme="boyfriend"] .plate{
-  background:radial-gradient(circle at 34% 26%, #FFFDF6 0%, var(--accent-3) 76%);
-  border-width:3.5px;
-  box-shadow:0 0 0 5px #fff, 0 6px 0 rgba(74,63,53,.16), 0 14px 22px rgba(74,63,53,.16);
+  background:radial-gradient(circle at 34% 26%, #FFFFFF 0%, rgba(255,158,196,.5) 78%);
+  border:3px solid rgba(120,80,100,.32);
+  box-shadow:0 8px 20px rgba(214,120,150,.24), inset 0 4px 0 rgba(255,255,255,.7);
 }
-[data-theme="boyfriend"] .rcode{ background:var(--accent-2); }
+[data-theme="boyfriend"] .rcode{ background:rgba(255,209,102,.6); color:#8A5B2E; border:none; border-radius:999px; }
+[data-theme="boyfriend"] .rname{ color:var(--ink); }
+[data-theme="boyfriend"] .rtag{ color:var(--ink-2); }
 .score{ margin-top:16px; }
-.score .num{ font-family:var(--hand); font-size:58px; font-weight:700; line-height:1; color:var(--rust); }
-.score .unit{ font-family:var(--hand); font-size:18px; font-weight:700; color:var(--ink-2); }
+.score .num{ font-family:var(--hand); font-size:56px; font-weight:600; line-height:1; color:#D9628C; }
+.score .unit{ font-family:var(--hand); font-size:18px; color:var(--ink-2); }
 .score .sub{ font-size:13px; color:var(--ink-2); margin-top:6px; }
 
-/* 撕纸便签：说明 / 金句 */
 [data-theme="boyfriend"] .portrait{
-  border:none; background:#FFFDF5; padding:20px 18px;
-  clip-path:polygon(0 3%,7% 0,22% 4%,39% 1%,56% 4%,73% 0,88% 4%,100% 2%,100% 97%,92% 100%,76% 96%,58% 100%,41% 96%,24% 100%,9% 96%,0 99%);
-  filter:drop-shadow(0 4px 5px rgba(74,63,53,.18));
+  background:rgba(255,255,255,.85); border:2px solid rgba(120,80,100,.18);
+  border-radius:18px; padding:16px 17px; line-height:2.0;
+  box-shadow:0 5px 16px rgba(190,140,160,.12);
 }
+[data-theme="boyfriend"] .detail h3{ background:linear-gradient(transparent 60%, rgba(142,217,192,.6) 60%); }
+[data-theme="boyfriend"] .detail li::before{ content:"♡"; color:var(--accent); }
 [data-theme="boyfriend"] .quote{
-  border:none; background:linear-gradient(180deg,#FFF3C9, #F6E3A6);
-  padding:20px 20px;
-  clip-path:polygon(1% 4%,14% 0,31% 5%,49% 1%,67% 5%,84% 0,100% 4%,99% 96%,86% 100%,69% 95%,52% 99%,34% 95%,17% 100%,0 96%);
-  filter:drop-shadow(0 5px 6px rgba(74,63,53,.20));
+  background:linear-gradient(180deg,#FFF3C9,#FFE7A8);
+  border:2px solid rgba(180,130,60,.35); border-radius:20px;
+  box-shadow:0 8px 20px rgba(190,150,80,.16); transform:rotate(-.6deg);
 }
+[data-theme="boyfriend"] .cta{ background:#FFF8EE; border:2px solid rgba(180,130,60,.35); border-radius:20px; }
+[data-theme="boyfriend"] .footer{ color:var(--ink-3); }
+
+/* 红线 */
 .redblock{
-  margin-top:18px; background:#FBE7E3; border:2.5px dashed var(--rust);
-  border-radius:4px 16px 5px 14px/14px 5px 18px 5px; padding:14px 16px;
-  font-size:14px; line-height:1.85; color:#7B211A; text-align:left;
+  margin-top:18px; background:#FDEDF1; border:2px dashed #D9628C;
+  border-radius:18px; padding:14px 16px; font-size:14px; line-height:1.85;
+  color:#8A3352; text-align:left;
 }
-.redblock b{ color:var(--rust); font-family:var(--hand); font-size:16px; }
-[data-theme="boyfriend"] .detail h3{ background:linear-gradient(transparent 60%, var(--accent-2) 60%); }
-[data-theme="boyfriend"] .detail li::before{ color:var(--dusty); }
+.redblock b{ color:#D9628C; font-family:var(--hand); font-size:16px; }
 
-/* ---------- 复古贴纸 ---------- */
-.stickers{ position:absolute; inset:0; pointer-events:none; z-index:6; }
-.stick{ position:absolute; display:block; filter:drop-shadow(0 3px 3px rgba(74,63,53,.28)); }
-.st-badge{ top:-18px; right:-12px; width:64px; transform:rotate(9deg); }
-.st-clip{ top:-12px; left:14px; width:22px; transform:rotate(-7deg); }
-.st-stamp{ bottom:-16px; right:-12px; width:48px; transform:rotate(-9deg); }
-.st-daisy{ top:42%; left:-16px; width:36px; transform:rotate(14deg); }
-.st-star{ top:-14px; right:66px; width:24px; transform:rotate(-12deg); }
-.st-heart{ bottom:-14px; left:-10px; width:30px; transform:rotate(10deg); }
-.st-bfly{ top:30%; right:-16px; width:44px; transform:rotate(10deg); }
-.st-tag{ bottom:-12px; left:24px; width:54px; transform:rotate(-5deg); }
-.st-key{ top:-14px; left:56px; width:26px; transform:rotate(8deg); }
-.st-washi{ top:36%; left:-22px; width:100px; height:24px; transform:rotate(-32deg); }
-
-.redeco, .deco{ display:none; }  /* 旧的贴纸层作废，改用 .stickers */
-
-.scribble path{ stroke:var(--dusty); }
-.scribble{ margin:10px 0 0; }
+/* ---------- 手绘涂鸦层 ---------- */
+.doodles{ position:absolute; inset:0; pointer-events:none; z-index:6; }
+.dd{ position:absolute; display:block; overflow:visible; }
+.dd-heart{ top:-16px; right:-8px; width:70px; transform:rotate(6deg); }
+.dd-sparkle{ top:64px; right:16px; width:26px; transform:rotate(-10deg); }
+.dd-flower{ bottom:-14px; left:-14px; width:56px; transform:rotate(8deg); }
+.dd-sparkle2{ top:-14px; left:-10px; width:56px; transform:rotate(-6deg); }
 
 @media (max-width:400px){
-  [data-theme="boyfriend"] h1{ font-size:30px; }
-  .st-daisy, .st-bfly, .st-washi{ display:none; }
+  [data-theme="boyfriend"] h1{ font-size:29px; }
+  .dd-sparkle, .dd-sparkle2{ display:none; }
 }
