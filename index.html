@@ -4,8 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>满分男友测评</title>
-<link rel="preconnect" href="https://fonts.loli.net" crossorigin>
-<link rel="stylesheet" href="https://fonts.loli.net/css2?family=ZCOOL+KuaiLe&display=swap">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Noto+Serif+SC:wght@400;600&display=swap">
 <link rel="stylesheet" href="assets/crayon.css">
 <link rel="stylesheet" href="assets/boyfriend.css">
 </head>
@@ -17,28 +18,23 @@
       <span class="kicker" id="kicker"></span>
       <h1 id="title"></h1>
       <p class="lede" id="intro"></p>
-      <svg class="scribble" viewBox="0 0 132 12" aria-hidden="true"><path d="M3 7 C26 1 44 11 66 5 C88 -1 108 11 129 4"/></svg>
+      <svg class="wavy" viewBox="0 0 138 12" aria-hidden="true"><path d="M3 7 C24 2.5 42 10.5 66 5.5 C90 .5 110 10 135 4.5"/></svg>
       <div class="meta">
         <span><b id="qTotal">40</b> <span id="qUnit">题</span></span>
         <span>约 6 分钟</span>
-        <span>答案由 TA 定</span>
+        <span>答案她说了算</span>
       </div>
     </header>
 
     <div class="card">
       <span class="tape"></span>
-      <div class="stickers" aria-hidden="true">
-        <svg class="stick st-clip" viewBox="0 0 26 44"><path d="M8 10 v22 a6 6 0 0 0 12 0 v-24 a4.5 4.5 0 0 0 -9 0 v22 a2.5 2.5 0 0 0 5 0 v-20" fill="none" stroke="#7C7269" stroke-width="2.4" stroke-linecap="round"/></svg>
-        <span class="washi st-washi"></span>
-        <svg class="stick st-badge" viewBox="0 0 64 64"><circle cx="32" cy="32" r="26" fill="#F2D06B" stroke="#fff" stroke-width="5"/><circle cx="32" cy="32" r="26" fill="none" stroke="#4A4543" stroke-width="1.6"/><circle cx="32" cy="32" r="19" fill="none" stroke="#A05A3C" stroke-width="1.4" stroke-dasharray="3 3"/><text x="32" y="39" text-anchor="middle" font-size="18" fill="#A05A3C" font-family="ZCOOL KuaiLe, cursive">100</text></svg>
-        <svg class="stick st-daisy" viewBox="0 0 40 40"><g stroke="#4A4543" stroke-width="1.3" fill="#FDF8F0"><circle cx="20" cy="9" r="6.2"/><circle cx="30" cy="17" r="6.2"/><circle cx="27" cy="30" r="6.2"/><circle cx="13" cy="30" r="6.2"/><circle cx="10" cy="17" r="6.2"/></g><circle cx="20" cy="20" r="5.6" fill="#F2D06B" stroke="#4A4543" stroke-width="1.3"/></svg>
-        <svg class="stick st-bfly" viewBox="0 0 44 40"><g stroke="#4A4543" stroke-width="1.4" stroke-linejoin="round" fill="#C9B8D9"><path d="M22 20 C12 4 2 8 5 17 C2 26 13 30 22 20 Z"/><path d="M22 20 C32 4 42 8 39 17 C42 26 31 30 22 20 Z"/></g><path d="M22 13 L22 30" stroke="#4A4543" stroke-width="1.6" stroke-linecap="round"/><path d="M22 13 L18 8 M22 13 L26 8" stroke="#4A4543" stroke-width="1.2" stroke-linecap="round"/></svg>
-        <svg class="stick st-star" viewBox="0 0 30 30"><path d="M15.2 3.6 L18.2 11.3 L26.1 11.8 L19.7 16.9 L22 25 L14.9 20.3 L7.7 24.9 L10.2 16.7 L3.9 11.5 L12 11.2 Z" fill="#F2D06B" stroke="#4A4543" stroke-width="1.6" stroke-linejoin="round"/></svg>
-        <svg class="stick st-heart" viewBox="0 0 30 30"><path d="M15 26 C6.2 19.2 2.2 14.6 2.4 9.8 C2.6 5.7 5.6 3.1 9.2 3.3 C11.7 3.4 13.6 4.9 15 7.2 C16.4 4.8 18.4 3.2 21.1 3.4 C24.7 3.5 27.6 6.2 27.6 9.9 C27.6 14.7 23.5 19.5 15 26 Z" fill="#D4919A" stroke="#4A4543" stroke-width="1.6" stroke-linejoin="round"/></svg>
-        <svg class="stick st-stamp" viewBox="0 0 60 72"><rect x="3" y="3" width="54" height="66" rx="2" fill="#FDF8F0" stroke="#4A4543" stroke-width="1.6"/><rect x="9" y="9" width="42" height="54" fill="none" stroke="#4A4543" stroke-width="1" stroke-dasharray="2 3"/><rect x="14" y="15" width="32" height="26" rx="1" fill="#A8C8E8" stroke="#4A4543" stroke-width="1"/><path d="M19 36 L25 27 L30 32 L35 24 L41 36 Z" fill="#FDF8F0" stroke="#4A4543" stroke-width="1"/><circle cx="30" cy="52" r="6" fill="#D4919A" stroke="#4A4543" stroke-width="1"/></svg>
+      <div class="doodles" aria-hidden="true">
+        <svg class="dd dd-heart" viewBox="0 0 70 70"><path d="M35 62 C13 44 6 32 7.5 21 C9 11.5 16.5 6 25 7 C30.4 7.6 34.4 11.2 35.8 16.4 C37.4 11 41.2 7.4 47 7 C55.5 6.4 62.6 12.2 63.6 21.6 C64.9 32.4 56.5 44 35 62 Z" fill="rgba(255,123,168,.30)" stroke="rgba(214,90,130,.92)" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/></svg>
+        <svg class="dd dd-sparkle" viewBox="0 0 64 64"><path d="M32 4 C33.6 14 36 17 46 18.6 C35.4 20.4 33.2 23.4 31.6 34 C30 23.6 27.8 20.4 17 18.8 C27.6 17 30 14 32 4 Z" fill="rgba(255,209,102,.8)" stroke="rgba(180,120,40,.9)" stroke-width="1.9" stroke-linejoin="round"/></svg>
+        <svg class="dd dd-flower" viewBox="0 0 58 58"><circle cx="29" cy="29" r="6.5" fill="rgba(255,209,102,.8)" stroke="rgba(180,120,40,.85)" stroke-width="1.7"/><g fill="rgba(142,217,192,.5)" stroke="rgba(70,150,130,.9)" stroke-width="1.8"><ellipse cx="29" cy="10" rx="7.5" ry="9"/><ellipse cx="46" cy="21" rx="7.5" ry="9"/><ellipse cx="41" cy="44" rx="7.5" ry="9"/><ellipse cx="17" cy="44" rx="7.5" ry="9"/><ellipse cx="12" cy="21" rx="7.5" ry="9"/></g></svg>
       </div>
       <p class="lede" id="startNote"></p>
-      <button class="btn" id="start"><span id="startLabel"></span> ✏️</button>
+      <button class="btn" id="start"><span id="startLabel"></span> ♡</button>
     </div>
   </section>
 
@@ -65,15 +61,10 @@
   <section id="s-result" class="hidden">
     <div class="card">
       <span class="tape tr"></span>
-      <div class="stickers" aria-hidden="true">
-        <svg class="stick st-badge" viewBox="0 0 64 64"><circle cx="32" cy="32" r="26" fill="#F2D06B" stroke="#fff" stroke-width="5"/><circle cx="32" cy="32" r="26" fill="none" stroke="#4A4543" stroke-width="1.6"/><circle cx="32" cy="32" r="19" fill="none" stroke="#A05A3C" stroke-width="1.4" stroke-dasharray="3 3"/><text x="32" y="39" text-anchor="middle" font-size="18" fill="#A05A3C" font-family="ZCOOL KuaiLe, cursive">100</text></svg>
-        <svg class="stick st-key" viewBox="0 0 40 40"><circle cx="13" cy="13" r="7" fill="#F2D06B" stroke="#4A4543" stroke-width="1.6"/><g stroke="#4A4543" stroke-width="1.6" fill="none" stroke-linecap="round"><path d="M18 18 L33 33"/><path d="M29 29 L33 25"/><path d="M25 25 L29 21"/></g></svg>
-        <svg class="stick st-daisy" viewBox="0 0 40 40"><g stroke="#4A4543" stroke-width="1.3" fill="#FDF8F0"><circle cx="20" cy="9" r="6.2"/><circle cx="30" cy="17" r="6.2"/><circle cx="27" cy="30" r="6.2"/><circle cx="13" cy="30" r="6.2"/><circle cx="10" cy="17" r="6.2"/></g><circle cx="20" cy="20" r="5.6" fill="#F2D06B" stroke="#4A4543" stroke-width="1.3"/></svg>
-        <svg class="stick st-bfly" viewBox="0 0 44 40"><g stroke="#4A4543" stroke-width="1.4" stroke-linejoin="round" fill="#C9B8D9"><path d="M22 20 C12 4 2 8 5 17 C2 26 13 30 22 20 Z"/><path d="M22 20 C32 4 42 8 39 17 C42 26 31 30 22 20 Z"/></g><path d="M22 13 L22 30" stroke="#4A4543" stroke-width="1.6" stroke-linecap="round"/><path d="M22 13 L18 8 M22 13 L26 8" stroke="#4A4543" stroke-width="1.2" stroke-linecap="round"/></svg>
-        <svg class="stick st-star" viewBox="0 0 30 30"><path d="M15.2 3.6 L18.2 11.3 L26.1 11.8 L19.7 16.9 L22 25 L14.9 20.3 L7.7 24.9 L10.2 16.7 L3.9 11.5 L12 11.2 Z" fill="#F2D06B" stroke="#4A4543" stroke-width="1.6" stroke-linejoin="round"/></svg>
-        <svg class="stick st-heart" viewBox="0 0 30 30"><path d="M15 26 C6.2 19.2 2.2 14.6 2.4 9.8 C2.6 5.7 5.6 3.1 9.2 3.3 C11.7 3.4 13.6 4.9 15 7.2 C16.4 4.8 18.4 3.2 21.1 3.4 C24.7 3.5 27.6 6.2 27.6 9.9 C27.6 14.7 23.5 19.5 15 26 Z" fill="#D4919A" stroke="#4A4543" stroke-width="1.6" stroke-linejoin="round"/></svg>
-        <svg class="stick st-tag" viewBox="0 0 56 32"><path d="M4 6 h34 l14 10 -14 10 H4 Z" fill="#FDF8F0" stroke="#4A4543" stroke-width="1.6" stroke-linejoin="round"/><circle cx="42" cy="16" r="2.4" fill="#4A4543"/></svg>
-        <svg class="stick st-stamp" viewBox="0 0 60 72"><rect x="3" y="3" width="54" height="66" rx="2" fill="#FDF8F0" stroke="#4A4543" stroke-width="1.6"/><rect x="9" y="9" width="42" height="54" fill="none" stroke="#4A4543" stroke-width="1" stroke-dasharray="2 3"/><rect x="14" y="15" width="32" height="26" rx="1" fill="#A8C8E8" stroke="#4A4543" stroke-width="1"/><path d="M19 36 L25 27 L30 32 L35 24 L41 36 Z" fill="#FDF8F0" stroke="#4A4543" stroke-width="1"/><circle cx="30" cy="52" r="6" fill="#D4919A" stroke="#4A4543" stroke-width="1"/></svg>
+      <div class="doodles" aria-hidden="true">
+        <svg class="dd dd-sparkle2" viewBox="0 0 64 64"><path d="M32 4 C33.6 14 36 17 46 18.6 C35.4 20.4 33.2 23.4 31.6 34 C30 23.6 27.8 20.4 17 18.8 C27.6 17 30 14 32 4 Z" fill="rgba(142,217,192,.62)" stroke="rgba(70,150,130,.88)" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        <svg class="dd dd-heart" viewBox="0 0 70 70"><path d="M35 62 C13 44 6 32 7.5 21 C9 11.5 16.5 6 25 7 C30.4 7.6 34.4 11.2 35.8 16.4 C37.4 11 41.2 7.4 47 7 C55.5 6.4 62.6 12.2 63.6 21.6 C64.9 32.4 56.5 44 35 62 Z" fill="rgba(255,123,168,.30)" stroke="rgba(214,90,130,.92)" stroke-width="2.3" stroke-linejoin="round" stroke-linecap="round"/></svg>
+        <svg class="dd dd-flower" viewBox="0 0 58 58"><circle cx="29" cy="29" r="6.5" fill="rgba(255,209,102,.8)" stroke="rgba(180,120,40,.85)" stroke-width="1.7"/><g fill="rgba(142,217,192,.5)" stroke="rgba(70,150,130,.9)" stroke-width="1.8"><ellipse cx="29" cy="10" rx="7.5" ry="9"/><ellipse cx="46" cy="21" rx="7.5" ry="9"/><ellipse cx="41" cy="44" rx="7.5" ry="9"/><ellipse cx="17" cy="44" rx="7.5" ry="9"/><ellipse cx="12" cy="21" rx="7.5" ry="9"/></g></svg>
       </div>
       <div class="result-head">
         <div class="plate" id="plate"></div>
@@ -95,15 +86,15 @@
     </div>
   </section>
 
-  <div class="footer">图鉴系列 · 满分男友测评<br>趣味自测 · 答案由出题人设定</div>
+  <div class="footer">图鉴系列 · 满分男友测评<br>趣味小测 · 别太当真 ♡</div>
 </main>
 
 <script>
 window.QUIZ = {
-  kicker: "情爱图鉴 · 男友册｜满分男友测评",
+  kicker: "恋爱小测 · 男友册",
   title: "满分男友测评",
-  intro: "四十道题，答案全由<em>她</em>定——<br>小到她爱喝什么、她的习惯，大到你们的以后。<br>你能答对几道？",
-  startNote: "这一册共 <b>40 道题</b>，每题的正确选项只有她知道。带「<b>可多选</b>」的题要选多个，选完点「下一题」。别猜她的标准——选你真实会做的。",
+  intro: "四十道题，答案只有<em>她知道</em>。<br>小到她爱喝什么，大到你们的以后。<br>来，看看你有多懂她。",
+  startNote: "一共 <b>40 题</b>，答案她说了算。看到「<b>可多选</b>」的题，记得多挑几个；选完点「下一题」。别猜她想听什么，选你平时<b>真的会做</b>的那样就好。",
   startLabel: "开始答题",
   hintMulti: "可多选",
   meta: { unit: "题" },
@@ -111,9 +102,9 @@ window.QUIZ = {
 
   bands: [
     { id:"gold", min:90, glyph:"🏆", code:"金奖 · 90–100 分", name:"满分男友", tag:"她的一百分，你真的拿到了",
-      portrait:"她出的每一道题，你几乎都答在了她的答案上——这不是运气，是你真的在记她。她喜欢的、她怕的、她要的节奏，你心里有一张关于她的地图。",
+      portrait:"她出的每一道题，你几乎都答在了她的答案上——这不是运气，是你真的把她放在心上了。她喜欢的、她怕的、她要的节奏，你心里有一张关于她的地图。",
       detail:[
-        ["她眼里的你", ["她说过的话你记得住，不用她重复第二遍","她的喜好和雷点，你张口就对","关系里的大事小情，你想的和她基本一致"]],
+        ["她眼里的你", ["她说过的话你记得住，不用她重复第二遍","她的喜好和雷点，你张口就能对上","关系里的大事小情，你想的和她基本一致"]],
         ["这有多难得", "「懂」不是天生的，是你愿意把注意力放在她身上。愿意花心思的人，才答得出她的答案。"],
         ["别停在这里", ["把你答对了什么告诉她，让她知道被懂了","也去问问她心里的你——双向，才走得远"]]
       ],
@@ -144,8 +135,8 @@ window.QUIZ = {
       quote:"答案对不上不可怕，可怕的是你不想知道她的答案。" }
   ],
 
-  redTitle: "🚩 红线提醒",
-  redText: "他在几道题里选了「不太健康」的答案——贬低、控制、冷暴力，或把你的感受不当回事。分数可以先放一放，但这几条值得你认真看一眼：如果它已经让你不安、甚至害怕，请优先保护你自己（报警 110 / 妇联 12338）。",
+  redTitle: "🚩 有一条红线，想让你看一眼",
+  redText: "他在几道题里选了「不太健康」的答案——贬低、控制、冷暴力，或者把你的感受不当回事。分数可以先放一放，但这几条值得你认真看一眼：如果它已经让你不安、甚至害怕，请优先保护你自己（报警 110 / 妇联 12338）。",
 
   disclaimer: "<b>说明</b> 本测评的正确选项由出题人（你）设定，属趣味自测，用来增加彼此了解，不构成专业心理测评或人格标签。",
 
@@ -163,86 +154,86 @@ window.QUIZ = {
   },
 
   questions: [
-    { tag:"第 1 题 · 口味", text:"我吃饭的口味是？",
-      opts:[{label:"无辣不欢"},{label:"清淡为主"},{label:"甜品控"},{label:"随心所欲、每天不一样"}], key:[3] },
-    { tag:"第 2 题 · 奶茶", text:"我最爱的奶茶 / 咖啡是？",
+    { tag:"第 1 题 · 口味", text:"说到吃，我是哪一派？",
+      opts:[{label:"无辣不欢，越辣越爽"},{label:"清淡为主，怕腻"},{label:"甜品是命，戒不掉"},{label:"看心情，每天都不一样"}], key:[3] },
+    { tag:"第 2 题 · 奶茶", text:"我点奶茶 / 咖啡，一般会点哪一杯？",
       opts:[{label:"生椰拿铁"},{label:"芋泥波波"},{label:"杨枝甘露"},{label:"美式 / 纯茶"}], key:[2] },
-    { tag:"第 3 题 · 安慰", text:"我心情不好时，最想要的安慰是？", multi:true,
-      opts:[{label:"抱着我听我说"},{label:"给我买好吃的"},{label:"陪我出去走走"},{label:"让我自己静静"}], key:[0,1] },
-    { tag:"第 4 题 · 雷点", text:"我最不能忍的雷点是？",
-      opts:[{label:"放我鸽子"},{label:"已读不回"},{label:"骗我 / 隐瞒"},{label:"当众下我面子"}], key:[2] },
-    { tag:"第 5 题 · 周末", text:"周末我最想怎么过？",
-      opts:[{label:"宅家追剧"},{label:"出门逛街探店"},{label:"去户外 / 运动"},{label:"睡到自然醒、随心"}], key:[3] },
-    { tag:"第 6 题 · 睡前", text:"我睡前的小习惯是？",
-      opts:[{label:"刷手机到困"},{label:"听歌 / 播客"},{label:"一定要抱着东西"},{label:"倒头就睡"}], key:[0] },
-    { tag:"第 7 题 · 礼物", text:"送礼物，我最吃哪一套？", multi:true,
-      opts:[{label:"实用的日常小物"},{label:"有仪式感的花 / 惊喜"},{label:"亲手做的（手写卡、手工）"},{label:"直接让我自己挑（给钱也行）"}], key:[0,1,2,3] },
-    { tag:"第 8 题 · 纪念日", text:"我们的纪念日在哪个区间？",
+    { tag:"第 3 题 · 哄我", text:"我不开心的时候，最想你怎么对我？", multi:true,
+      opts:[{label:"抱着我，听我慢慢讲"},{label:"先给我买点好吃的"},{label:"陪我出去走走"},{label:"让我自己待一会儿"}], key:[0,1] },
+    { tag:"第 4 题 · 雷点", text:"我最容易因为哪件事炸毛？",
+      opts:[{label:"放我鸽子"},{label:"已读不回"},{label:"骗我、瞒着我"},{label:"当众不给我面子"}], key:[2] },
+    { tag:"第 5 题 · 周末", text:"周末如果全随我安排，我会选？",
+      opts:[{label:"宅家追剧，哪也不去"},{label:"出门逛街、探店"},{label:"去户外撒野"},{label:"睡到自然醒，想到哪算哪"}], key:[3] },
+    { tag:"第 6 题 · 睡前", text:"我睡觉之前，一般会？",
+      opts:[{label:"刷手机刷到困"},{label:"听歌 / 听播客"},{label:"一定要抱着点什么"},{label:"倒头就睡"}], key:[0] },
+    { tag:"第 7 题 · 礼物", text:"送我东西，我最吃哪一套？", multi:true,
+      opts:[{label:"实用的日常小物"},{label:"有仪式感的花 / 惊喜"},{label:"亲手做的（手写卡、手工）"},{label:"干脆让我自己挑（给钱也行）"}], key:[0,1,2,3] },
+    { tag:"第 8 题 · 纪念日", text:"我们的纪念日，落在哪个季节？",
       opts:[{label:"1–3 月"},{label:"4–6 月"},{label:"7–9 月"},{label:"10–12 月"}], key:[2] },
-    { tag:"第 9 题 · 夸奖", text:"我最想被夸的是？", multi:true,
+    { tag:"第 9 题 · 夸我", text:"夸我的时候，夸哪里我最开心？", multi:true,
       opts:[{label:"外貌 / 穿搭"},{label:"性格 / 温柔"},{label:"能力 / 努力"},{label:"有趣 / 幽默"}], key:[0,1,2,3] },
-    { tag:"第 10 题 · 压力", text:"我压力大时，最明显的信号是？",
-      opts:[{label:"话变少、不想理人"},{label:"一直吐槽"},{label:"情绪不稳定、容易炸或低落"},{label:"失眠、吃不下"}], key:[2] },
+    { tag:"第 10 题 · 压力", text:"我压力大的时候，会变成什么样？",
+      opts:[{label:"话变少，不想理人"},{label:"变成吐槽机器"},{label:"情绪不稳，容易炸或低落"},{label:"睡不着、吃不下"}], key:[2] },
     { tag:"第 11 题 · 最近", text:"我最近最想做成的一件事是？",
       opts:[{label:"工作 / 考证"},{label:"减肥 / 健身"},{label:"学一个新技能"},{label:"存钱 / 旅行"}], key:[0] },
-    { tag:"第 12 题 · 相处", text:"我最喜欢的情侣相处方式是？",
-      opts:[{label:"天天黏在一起"},{label:"各有空间、定期约会"},{label:"像朋友一样无话不谈"},{label:"仪式感拉满"}], key:[1] },
-    { tag:"第 13 题 · 吵架后", text:"我们吵架后，我最希望他先？", multi:true,
-      opts:[{label:"先抱我、哄我"},{label:"跟我讲道理、分对错"},{label:"先各自冷静"},{label:"先认错，不管谁对"}], key:[0,1] },
-    { tag:"第 14 题 · 独处", text:"我需要独处时，我希望他？",
-      opts:[{label:"痛快放我走、不追问"},{label:"问清楚原因再放"},{label:"不安、想陪着我"},{label:"怀疑我是不是不爱他了", red:true}], key:[0] },
-    { tag:"第 15 题 · 分享", text:"我分享一件小事时，我希望他？",
-      opts:[{label:"认真听、接我的话"},{label:"帮我分析解决"},{label:"敷衍地「嗯嗯嗯」"},{label:"嫌我啰嗦", red:true}], key:[1] },
-    { tag:"第 16 题 · 联系", text:"我需要的联系频率是？",
-      opts:[{label:"随时能找、秒回最好"},{label:"每天有来有回"},{label:"有事说事、不用天天汇报"},{label:"想起来再聊"}], key:[1] },
-    { tag:"第 17 题 · 决定", text:"我做重要决定时，我希望他？",
-      opts:[{label:"只在我问的时候给建议"},{label:"主动帮我分析利弊"},{label:"无条件支持我的选择"},{label:"替我拿主意"}], key:[1] },
-    { tag:"第 18 题 · 节日", text:"关于纪念日和节日，我希望他？",
-      opts:[{label:"都记得、有惊喜"},{label:"记得就好、过不过看情况"},{label:"记不记得无所谓"},{label:"我不太在意节日"}], key:[1] },
-    { tag:"第 19 题 · 边界", text:"关于我们之间的「忠诚 / 边界」，我最在意的是？",
-      opts:[{label:"身体和情感都不能越界"},{label:"可以有异性朋友，但不能隐瞒"},{label:"只要不让我发现就好"},{label:"我完全信他、不设限"}], key:[1] },
-    { tag:"第 20 题 · 脆弱", text:"我最脆弱、最需要他的时候，我希望他？", multi:true,
-      opts:[{label:"先抱住我、什么都别说"},{label:"陪着我、听我哭完"},{label:"帮我把事情解决掉"},{label:"给我空间、让我自己缓"}], key:[0,1] },
-    { tag:"第 21 题 · 钱", text:"钱这件事上，我希望我们？",
-      opts:[{label:"各花各的、AA"},{label:"他多承担一些"},{label:"一起存钱、共同规划"},{label:"谁方便谁付、不计较"}], key:[2] },
-    { tag:"第 22 题 · 家人", text:"如果我和他家人起冲突，我希望他？",
-      opts:[{label:"无条件站我这边"},{label:"先安抚我、再去沟通"},{label:"讲道理、谁对听谁"},{label:"和稀泥、让我忍", red:true}], key:[1] },
-    { tag:"第 23 题 · 事业", text:"我事业上有重大选择，我希望他？",
-      opts:[{label:"全力支持、甚至为我调整"},{label:"支持，但一起权衡现实"},{label:"劝我稳妥一点"},{label:"让我自己决定、他不管"}], key:[1] },
-    { tag:"第 24 题 · 异地", text:"如果异地，我最需要他做到的是？",
-      opts:[{label:"固定联系、报备行程"},{label:"定期见面"},{label:"给我安全感、不搞暧昧"},{label:"信任我、别查岗"}], key:[2] },
-    { tag:"第 25 题 · 最怕", text:"长期关系里，我最怕的是？",
-      opts:[{label:"冷淡、没话说"},{label:"被控制、失去自己"},{label:"他不上心、敷衍"},{label:"背叛"}], key:[1] },
-    { tag:"第 26 题 · 旧伤", text:"我最大的不安全感来自？",
+    { tag:"第 12 题 · 相处", text:"我最想要的相处方式，是哪种？",
+      opts:[{label:"天天黏在一起"},{label:"各有各的空间，定期约会"},{label:"像朋友一样，什么都能聊"},{label:"仪式感拉满"}], key:[1] },
+    { tag:"第 13 题 · 吵完架", text:"吵完架，我最希望你做的第一件事是？", multi:true,
+      opts:[{label:"先抱抱我、哄哄我"},{label:"跟我把道理讲清楚"},{label:"先各自冷静一下"},{label:"不管谁对，先认错"}], key:[0,1] },
+    { tag:"第 14 题 · 独处", text:"我说「想一个人待会儿」，你最好？",
+      opts:[{label:"痛快放我走，别追问"},{label:"问清楚原因再放"},{label:"有点不安，想陪着我"},{label:"怀疑我是不是不爱你了", red:true}], key:[0] },
+    { tag:"第 15 题 · 分享", text:"我跟你说件小事的时候，我最想要你？",
+      opts:[{label:"认真听，接住我的话"},{label:"帮我一起想办法"},{label:"敷衍地「嗯嗯嗯」"},{label:"嫌我啰嗦", red:true}], key:[1] },
+    { tag:"第 16 题 · 联系", text:"我们每天聊多少，我会觉得刚刚好？",
+      opts:[{label:"随时找得到，秒回最好"},{label:"每天有来有回就行"},{label:"有事说事，不用天天汇报"},{label:"想起来了再聊"}], key:[1] },
+    { tag:"第 17 题 · 决定", text:"我要做个重要决定时，我希望你？",
+      opts:[{label:"我不问你，就别插嘴"},{label:"主动帮我一起捋利弊"},{label:"无条件支持我的选择"},{label:"直接替我拿主意"}], key:[1] },
+    { tag:"第 18 题 · 节日", text:"纪念日、节日这些，我的态度是？",
+      opts:[{label:"都要记得，还得有惊喜"},{label:"记得就好，过不过看情况"},{label:"记不记得其实无所谓"},{label:"我本来就不太在意节日"}], key:[1] },
+    { tag:"第 19 题 · 边界", text:"关于「忠诚」，我心里那条线是？",
+      opts:[{label:"身体和情感，都不能越界"},{label:"可以有异性朋友，但不能瞒着我"},{label:"只要别让我知道就好"},{label:"我完全信他，不设限"}], key:[1] },
+    { tag:"第 20 题 · 脆弱", text:"我最难受、最需要人的时候，我希望你？", multi:true,
+      opts:[{label:"先抱住我，什么都别说"},{label:"陪着我，听我哭完"},{label:"帮我把事情解决掉"},{label:"给我空间，让我自己缓"}], key:[0,1] },
+    { tag:"第 21 题 · 钱", text:"花钱这件事，我理想的状态是？",
+      opts:[{label:"各花各的，AA"},{label:"你多承担一点"},{label:"一起存钱，一起规划"},{label:"谁方便谁付，不计较"}], key:[2] },
+    { tag:"第 22 题 · 家人", text:"万一我和你家人闹了别扭，我希望你？",
+      opts:[{label:"无条件站我这边"},{label:"先安抚我，再去沟通"},{label:"讲道理，谁对听谁"},{label:"两边和稀泥，让我忍一忍", red:true}], key:[1] },
+    { tag:"第 23 题 · 事业", text:"我事业上要做个大选择，我希望你？",
+      opts:[{label:"全力支持，甚至为我调整"},{label:"支持我，但陪我一起权衡现实"},{label:"劝我稳妥一点"},{label:"让我自己决定，你不插手"}], key:[1] },
+    { tag:"第 24 题 · 异地", text:"如果我们异地，我最需要你做到的是？",
+      opts:[{label:"固定联系、报备行程"},{label:"定期见面"},{label:"给我安全感，不搞暧昧"},{label:"信任我，别查岗"}], key:[2] },
+    { tag:"第 25 题 · 最怕", text:"长期相处里，我最怕的是？",
+      opts:[{label:"慢慢变冷淡，没话说"},{label:"被控制，失去自己"},{label:"你不上心、敷衍我"},{label:"背叛"}], key:[1] },
+    { tag:"第 26 题 · 不安", text:"我心里那点不安全感，大多来自？",
       opts:[{label:"原生家庭"},{label:"过去的感情"},{label:"对自己不够自信"},{label:"怕被抛下"}], key:[1] },
-    { tag:"第 27 题 · 最怕话", text:"吵到最凶时，我最怕他说的那句话是？", multi:true,
+    { tag:"第 27 题 · 最怕的话", text:"吵到最凶的时候，我最怕听到你说的一句是？", multi:true,
       opts:[{label:"「随便你」"},{label:"「你要这么想我也没办法」"},{label:"「那就分手吧」"},{label:"「都是我的错，行了吧」"}], key:[0,2,3] },
-    { tag:"第 28 题 · 价值观", text:"在关系里，我最不能妥协的价值观是？",
+    { tag:"第 28 题 · 底线", text:"关系里，我最不肯让步的是？",
       opts:[{label:"忠诚"},{label:"尊重和平等"},{label:"共同成长"},{label:"自由和边界"}], key:[0] },
-    { tag:"第 29 题 · 未来", text:"我对未来生活的期待更接近？", multi:true,
-      opts:[{label:"在大城市拼一把"},{label:"安稳的小日子"},{label:"自由、不被绑定"},{label:"一起创业 / 折腾"}], key:[0,2] },
-    { tag:"第 30 题 · 孩子", text:"关于「要不要孩子 / 什么时候要」，我的态度是？",
+    { tag:"第 29 题 · 以后", text:"说到以后的日子，我更向往？", multi:true,
+      opts:[{label:"在大城市拼一把"},{label:"安稳的小日子"},{label:"自由，不被绑住"},{label:"一起创业 / 折腾"}], key:[0,2] },
+    { tag:"第 30 题 · 孩子", text:"关于「要不要孩子、什么时候要」，我现在是？",
       opts:[{label:"想早点要"},{label:"稳定了再说"},{label:"还在犹豫"},{label:"我不想要孩子"}], key:[1] },
-    { tag:"第 31 题 · 不想听", text:"我难过的时候，最不想听到的一句话是？", multi:true,
+    { tag:"第 31 题 · 别这么说", text:"我难过的时候，最不想听到的一句是？", multi:true,
       opts:[{label:"「别想太多」"},{label:"「这有什么好哭的」"},{label:"「你要坚强」"},{label:"「我早就说过了」"}], key:[1,3] },
-    { tag:"第 32 题 · 好消息", text:"我分享一个好消息时，我最希望他？", multi:true,
-      opts:[{label:"真心为我高兴、比我还激动"},{label:"帮我复盘下一步"},{label:"提醒我别飘"},{label:"直接带我吃一顿庆祝"}], key:[0,1,3] },
-    { tag:"第 33 题 · 钱观", text:"在钱这件事上，我最看重的是？", multi:true,
-      opts:[{label:"他舍得为我花"},{label:"他理性有规划、不乱花"},{label:"他愿意对我透明公开"},{label:"他经济独立、不啃老"}], key:[0,1] },
-    { tag:"第 34 题 · 朋友", text:"关于我的朋友圈，我希望他？",
-      opts:[{label:"主动融入、给我长脸"},{label:"礼貌客气就好"},{label:"不想去就不去、不勉强"},{label:"不喜欢我的朋友，但也别说"}], key:[2] },
-    { tag:"第 35 题 · 吵架观", text:"吵架这件事，我最看重的是？", multi:true,
-      opts:[{label:"不隔夜、当场把话说开"},{label:"会真诚说「对不起」"},{label:"能听懂我为什么生气"},{label:"认错之后真的会改"}], key:[1,2,3] },
-    { tag:"第 36 题 · 懂我", text:"我最希望他记住的「关于我」是？", multi:true,
-      opts:[{label:"我的喜好和小习惯"},{label:"我的生理期和身体情况"},{label:"我的工作节奏和日程"},{label:"我的梦想和我害怕的事"}], key:[0,1,2,3] },
-    { tag:"第 37 题 · 分寸", text:"关于分寸，我希望他？", multi:true,
-      opts:[{label:"给我完全的自由、不追问"},{label:"关心我，但不过界"},{label:"想吃醋就直接说、别猜"},{label:"我们一起商量出舒服的距离"}], key:[2,3] },
-    { tag:"第 38 题 · 住哪", text:"关于「以后住哪」，我的想法是？",
-      opts:[{label:"跟他走都行"},{label:"两个人一起商量决定"},{label:"我有明确想去的城市"},{label:"无所谓，人在哪家在哪"}], key:[3] },
-    { tag:"第 39 题 · 为我做", text:"我最希望他「为我做」的是？", multi:true,
-      opts:[{label:"主动分担家务和琐事"},{label:"我不舒服时把我照顾好"},{label:"愿意听我聊心里话"},{label:"一起去做没试过的事"}], key:[0,1,2,3] },
-    { tag:"第 40 题 · 我伤他", text:"如果我不小心伤到了他，我希望他？",
-      opts:[{label:"直接告诉我他难受"},{label:"生气，但给我解释和弥补的机会"},{label:"冷一下、让我自己反省", red:true},{label:"假装没事、自己消化"}], key:[0] }
+    { tag:"第 32 题 · 好消息", text:"我有个好消息想跟你分享，我最想要你？", multi:true,
+      opts:[{label:"真心替我高兴，比我还激动"},{label:"帮我一起想想下一步"},{label:"提醒我别飘"},{label:"直接带我去吃一顿庆祝"}], key:[0,1,3] },
+    { tag:"第 33 题 · 看重的", text:"在钱上，我最看重你哪一点？", multi:true,
+      opts:[{label:"舍得为我花"},{label:"理性有规划，不乱花"},{label:"愿意对我透明公开"},{label:"经济独立，不啃老"}], key:[0,1] },
+    { tag:"第 34 题 · 朋友", text:"我的朋友们，我希望你？",
+      opts:[{label:"主动融进来，给我长长脸"},{label:"礼貌客气就好"},{label:"不想去就不去，不勉强"},{label:"不喜欢也没关系，但别说出口"}], key:[2] },
+    { tag:"第 35 题 · 吵架", text:"吵架这件事上，我最在乎的是？", multi:true,
+      opts:[{label:"不隔夜，当场说开"},{label:"会认真说一句「对不起」"},{label:"能听懂我为什么生气"},{label:"认了错，之后真的会改"}], key:[1,2,3] },
+    { tag:"第 36 题 · 记得我", text:"我最希望你能记住的「关于我」，是？", multi:true,
+      opts:[{label:"我的喜好和小习惯"},{label:"我的生理期和身体状况"},{label:"我的工作节奏和日程"},{label:"我的梦想，还有我害怕的事"}], key:[0,1,2,3] },
+    { tag:"第 37 题 · 分寸", text:"关于「分寸」，我希望你？", multi:true,
+      opts:[{label:"给我完全的自由，不追问"},{label:"关心我，但别越界"},{label:"想吃醋就直接说，别让我猜"},{label:"一起去商量出舒服的距离"}], key:[2,3] },
+    { tag:"第 38 题 · 住哪", text:"「以后住哪」，我的想法是？",
+      opts:[{label:"跟你走，都行"},{label:"两个人一起商量"},{label:"我心里有明确想去的城市"},{label:"无所谓，你在哪哪就是家"}], key:[3] },
+    { tag:"第 39 题 · 为我做", text:"我最希望你能「为我做」的是？", multi:true,
+      opts:[{label:"主动分担家务和琐事"},{label:"我不舒服的时候，把我照顾好"},{label:"愿意听我聊心里话"},{label:"一起去做好多没试过的事"}], key:[0,1,2,3] },
+    { tag:"第 40 题 · 我伤了你", text:"如果我哪句话不小心伤到了你，我希望你？",
+      opts:[{label:"直接告诉我你难受"},{label:"生气，但给我解释和弥补的机会"},{label:"冷一下，让我自己反省", red:true},{label:"假装没事，自己消化"}], key:[0] }
   ]
 };
 </script>
