@@ -230,6 +230,20 @@ body[data-theme="boyfriend"]::after{
   color:#2F6155; background:rgba(142,217,192,.32); border-radius:16px; padding:11px 13px;
 }
 
+/* ---------- 封面奖励清单 ---------- */
+.rewards{ margin-top:22px; }
+.rw-item{
+  display:flex; gap:10px; align-items:baseline;
+  padding:9px 0; border-bottom:1.5px dashed rgba(120,80,100,.18);
+}
+.rw-item:last-child{ border-bottom:none; }
+.rw-item b{
+  flex:0 0 50px; text-align:center; padding:2px 0;
+  font-family:var(--hand); font-size:13px; color:#8A5B2E;
+  background:rgba(255,209,102,.55); border-radius:999px;
+}
+.rw-item span{ font-size:14px; line-height:1.7; color:var(--ink); }
+
 @media (max-width:400px){
   [data-theme="boyfriend"] h1{ font-size:29px; }
   .dd-sparkle, .dd-sparkle2{ display:none; }
