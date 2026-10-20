@@ -184,6 +184,52 @@ body[data-theme="boyfriend"]::after{
 .dd-flower{ bottom:-14px; left:-14px; width:56px; transform:rotate(8deg); }
 .dd-sparkle2{ top:-14px; left:-10px; width:56px; transform:rotate(-6deg); }
 
+/* ---------- 奖励 ---------- */
+.reward{
+  margin-top:18px; background:linear-gradient(180deg,#FFF4D8,#FFE7A8);
+  border:2px solid rgba(180,130,60,.38); border-radius:20px; padding:16px 17px;
+  box-shadow:0 8px 20px rgba(190,150,80,.16); transform:rotate(-.5deg);
+}
+.reward .rw-tag{
+  display:inline-block; font-family:var(--sans); font-size:11px; letter-spacing:.12em;
+  background:rgba(255,158,196,.55); color:#8A4A63; border-radius:999px; padding:4px 11px;
+}
+.reward .rw-txt{ margin-top:10px; font-family:var(--hand); font-size:18px; line-height:1.7; color:#7A5A22; }
+
+/* ---------- 逐题对照 ---------- */
+.review{
+  margin-top:20px; background:rgba(255,255,255,.86);
+  border:2px solid rgba(120,80,100,.20); border-radius:20px; overflow:hidden;
+}
+.review summary{
+  cursor:pointer; list-style:none; padding:14px 16px;
+  font-family:var(--hand); font-size:16px; color:var(--ink);
+  background:rgba(142,217,192,.28);
+}
+.review summary::-webkit-details-marker{ display:none; }
+.review summary::after{ content:" ▾"; color:var(--ink-2); }
+.review[open] summary::after{ content:" ▴"; }
+.rv-list{ padding:6px 14px 14px; }
+.rv-row{ padding:11px 0; border-bottom:1.5px dashed rgba(120,80,100,.18); }
+.rv-row:last-child{ border-bottom:none; }
+.rv-q{ font-size:14px; line-height:1.7; color:var(--ink); }
+.rv-mark{ display:inline-block; width:18px; font-weight:700; }
+.rv-row.ok .rv-mark{ color:#2E9E7B; }
+.rv-row:not(.ok) .rv-mark{ color:#D9628C; }
+.rv-line{ display:flex; gap:8px; font-size:13px; line-height:1.7; color:var(--ink-2); padding-left:18px; }
+.rv-lb{
+  flex:0 0 52px; color:var(--ink-3); font-family:"Special Elite","Courier New",monospace; font-size:11px;
+  padding-top:2px;
+}
+.rv-row.ok .rv-line:last-child span:last-child{ color:#2E9E7B; }
+
+/* ---------- 分享 ---------- */
+#shareBtn{ margin-top:18px; }
+#shareMsg{
+  margin-top:12px; text-align:center; font-size:13.5px; line-height:1.7;
+  color:#2F6155; background:rgba(142,217,192,.32); border-radius:16px; padding:11px 13px;
+}
+
 @media (max-width:400px){
   [data-theme="boyfriend"] h1{ font-size:29px; }
   .dd-sparkle, .dd-sparkle2{ display:none; }
