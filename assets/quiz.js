@@ -76,11 +76,13 @@
       var t = document.createElement("span"); t.textContent = o.label;
       b.appendChild(k); b.appendChild(t);
       b.onclick = function () {
-        var cur = (answers[idx] || []).slice();
         if (q.multi) {
+          var cur = (answers[idx] || []).slice();
           var p = cur.indexOf(i);
           if (p >= 0) cur.splice(p, 1); else cur.push(i);
-          answers[idx] = cur; renderQ();
+          answers[idx] = cur;
+          b.classList.toggle("on", cur.indexOf(i) >= 0);
+          if (next) next.disabled = cur.length === 0;
         } else {
           answers[idx] = [i]; go(1);
         }
